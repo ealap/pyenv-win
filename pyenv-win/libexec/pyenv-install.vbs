@@ -390,7 +390,7 @@ Sub main(arg)
     If Is32Bit Then
         opt32 = False
         opt64 = False
-    End If    
+    End If
     If opt32 And opt64 Then
         WScript.Echo "pyenv-install: only --32only or --64only may be specified, not both."
         WScript.Quit 1
@@ -473,7 +473,7 @@ Sub main(arg)
                 installVersions.Item(ary(0)) = Empty
             Else
                 ShowHelp
-            End If    
+            End If
         End If
     End If
 

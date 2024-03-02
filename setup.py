@@ -46,13 +46,13 @@ setup(
         'pyenv-win': 'pyenv-win'
     },
     package_data = {
-        'pyenv-win': 
+        'pyenv-win':
         [
-            'bin/*', 
+            'bin/*',
             'bin/WiX/*',
-            'libexec/*', 
-            'libexec/libs/*', 
-            '../.version', 
+            'libexec/*',
+            'libexec/libs/*',
+            '../.version',
             '.versions_cache.xml'
         ]
     },

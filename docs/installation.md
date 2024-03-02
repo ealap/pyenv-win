@@ -7,7 +7,7 @@ Currently we support following ways, choose any of your comfort:
 - [Pyenv-win zip](#pyenv-win-zip) - manual installation
 - [Python pip](#python-pip) - for existing users
 - [Chocolatey](#chocolatey)
-- [How to use 32-train](#how-to-use-32-train)  
+- [How to use 32-train](#how-to-use-32-train)
   - [check announcements](../README.md#announcements)
 
 Hurray! When you are done here are steps to [Validate installation](../README.md#validate-installation)
@@ -31,8 +31,8 @@ If you are getting any **UnauthorizedAccess** error as below then start Windows 
 more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
 At line:1 char:173
 + ... n.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~ 
- + CategoryInfo          : SecurityError: (:) [], PSSecurityException 
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+ + CategoryInfo          : SecurityError: (:) [], PSSecurityException
  + FullyQualifiedErrorId : UnauthorizedAccess
 ```
 
@@ -92,7 +92,7 @@ For existing python users
 
 ### Command prompt
 
-`pip install pyenv-win --target %USERPROFILE%\\.pyenv`  
+`pip install pyenv-win --target %USERPROFILE%\\.pyenv`
 
 If you run into an error with the above command use the folllowing instead ([#303](https://github.com/ealap/pyenv-win/issues/303)):
 
