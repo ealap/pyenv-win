@@ -16,7 +16,7 @@ setup(
     description = "pyenv lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.",
     long_description = long_description,
     long_description_content_type = 'text/markdown',
-    url = 'https://github.com/pyenv-win/pyenv-win.git',
+    url = 'https://github.com/ealap/pyenv-win.git',
     author = 'Kiran Kumar Kotari',
     author_email = 'kirankotari@live.com',
     classifiers = [

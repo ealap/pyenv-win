@@ -277,7 +277,7 @@ Sub ShowHelp()
      WScript.Echo "   whence       List all Python versions that contain the given executable"
      WScript.Echo ""
      WScript.Echo "See `pyenv help <command>' for information on a specific command."
-     WScript.Echo "For full documentation, see: https://github.com/pyenv-win/pyenv-win#readme"
+     WScript.Echo "For full documentation, see: https://github.com/ealap/pyenv-win#readme"
 End Sub
 
 Sub CommandScriptVersion(arg)

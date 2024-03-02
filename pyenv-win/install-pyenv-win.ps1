@@ -65,7 +65,7 @@ Function Get-CurrentVersion() {
 
 Function Get-LatestVersion() {
     $LatestVersionFilePath = "$PyEnvDir\latest.version"
-    (New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/.version", $LatestVersionFilePath)
+    (New-Object System.Net.WebClient).DownloadFile("https://raw.githubusercontent.com/ealap/pyenv-win/master/.version", $LatestVersionFilePath)
     $LatestVersion = Get-Content $LatestVersionFilePath
 
     Remove-Item -Path $LatestVersionFilePath
@@ -116,7 +116,7 @@ Function Main() {
 
     $DownloadPath = "$PyEnvDir\pyenv-win.zip"
 
-    (New-Object System.Net.WebClient).DownloadFile("https://github.com/pyenv-win/pyenv-win/archive/master.zip", $DownloadPath)
+    (New-Object System.Net.WebClient).DownloadFile("https://github.com/ealap/pyenv-win/archive/master.zip", $DownloadPath)
     Microsoft.PowerShell.Archive\Expand-Archive -Path $DownloadPath -DestinationPath $PyEnvDir
     Move-Item -Path "$PyEnvDir\pyenv-win-master\*" -Destination "$PyEnvDir"
     Remove-Item -Path "$PyEnvDir\pyenv-win-master" -Recurse
@@ -144,7 +144,7 @@ Function Main() {
         Write-Host "pyenv-win is successfully installed. You may need to close and reopen your terminal before using it."
     }
     Else {
-        Write-Host "pyenv-win was not installed successfully. If this issue persists, please open a ticket: https://github.com/pyenv-win/pyenv-win/issues."
+        Write-Host "pyenv-win was not installed successfully. If this issue persists, please open a ticket: https://github.com/ealap/pyenv-win/issues."
     }
 }
 
