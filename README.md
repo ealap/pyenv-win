@@ -6,9 +6,9 @@ For existing python users, we support [installation via pip](#installation).
 
 Contributors and Interested people can join us on @[Slack](https://join.slack.com/t/pyenv/shared_invite/zt-f9ydwgyt-Fp8tehxqeCQi5mi77RxpGw). Your help keeps us motivated!
 
-[![pytest](https://github.com/pyenv-win/pyenv-win/actions/workflows/pytest.yml/badge.svg)](https://github.com/pyenv-win/pyenv-win/actions/workflows/pytest.yml)
+[![pytest](https://github.com/ealap/pyenv-win/actions/workflows/pytest.yml/badge.svg)](https://github.com/ealap/pyenv-win/actions/workflows/pytest.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues open](https://img.shields.io/github/issues/pyenv-win/pyenv-win.svg?)](https://github.com/pyenv-win/pyenv-win/issues)
+[![GitHub issues open](https://img.shields.io/github/issues/pyenv-win/pyenv-win.svg?)](https://github.com/ealap/pyenv-win/issues)
 [![Downloads](https://pepy.tech/badge/pyenv-win)](https://pepy.tech/project/pyenv-win)
 [![Rate this package](https://badges.openbase.com/python/rating/pyenv-win.svg?token=hjylt9qszl1DzDMCXNqMQZ6ijtlNCYzG3dKZNF+hgk4=)](https://openbase.com/python/pyenv-win?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
 
@@ -42,7 +42,7 @@ This project was forked from [rbenv-win][3] and modified for [pyenv][1]. It is n
 1. Install pyenv-win in PowerShell.
 
    ```pwsh
-   Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+   Invoke-Expression "& { $(Invoke-RestMethod "https://raw.githubusercontent.com/ealap/pyenv-win/dev/ealap/main/pyenv-win/install-pyenv-win.ps1") }"
    ```
 
 2. Reopen PowerShell
@@ -71,7 +71,7 @@ This project was forked from [rbenv-win][3] and modified for [pyenv][1]. It is n
    local        Set or show the local application-specific Python version
    global       Set or show the global Python version
    shell        Set or show the shell-specific Python version
-   install      Install 1 or more versions of Python 
+   install      Install 1 or more versions of Python
    uninstall    Uninstall 1 or more versions of Python
    update       Update the cached version DB
    rehash       Rehash pyenv shims (run this after switching Python versions)
@@ -79,7 +79,7 @@ This project was forked from [rbenv-win][3] and modified for [pyenv][1]. It is n
    version      Show the current Python version and its origin
    version-name Show the current Python version
    versions     List all Python versions available to pyenv
-   exec         Runs an executable by first preparing PATH so that the selected 
+   exec         Runs an executable by first preparing PATH so that the selected
                 Python version's `bin' directory is at the front
    which        Display the full path to an executable
    whence       List all Python versions that contain the given executable
@@ -106,7 +106,13 @@ Please see the [Installation](./docs/installation.md) page for more details.
 
 If you are getting "**command not found**" error, check the below note and [manually check the settings](#manually-check-the-settings)
 
-For Visual Studio Code or another IDE with a built in terminal, restart it and check again  
+For Visual Studio Code or another IDE with a built in terminal, restart it and check again
+
+## Uninstall
+
+   ```pwsh
+   Invoke-Expression "& { $(Invoke-RestMethod "https://raw.githubusercontent.com/ealap/pyenv-win/dev/ealap/main/pyenv-win/install-pyenv-win.ps1") } -Uninstallv"
+   ```
 
 ***
 
@@ -115,10 +121,10 @@ For Visual Studio Code or another IDE with a built in terminal, restart it and c
 Ensure all environment variables are properly set with high priority via the GUI:
 
 ```plaintext
-This PC 
+This PC
    → Properties
-      → Advanced system settings 
-         → Advanced → Environment Variables... 
+      → Advanced system settings
+         → Advanced → Environment Variables...
             → PATH
 ```
 
@@ -196,7 +202,7 @@ Both releases can install 64bit and 32bit python versions; the difference is in 
 3.8.2-amd64
 ....
 ```
-  
+
 Support for Python versions below 2.4 have been dropped since their installers don't install "cleanly" like versions from 2.4 onward and they're predominantly out of use/support in most environments now.
 
 ## FAQ
@@ -219,7 +225,7 @@ Please see the [Changelog](./docs/changelog.md) page.
 
 ## Bug Tracker and Support
 
-- Please report any suggestions, bug reports, or annoyances with pyenv-win through the [GitHub bug tracker](https://github.com/pyenv-win/pyenv-win/issues).
+- Please report any suggestions, bug reports, or annoyances with pyenv-win through the [GitHub bug tracker](https://github.com/ealap/pyenv-win/issues).
 
 ## License and Copyright
 
@@ -229,7 +235,7 @@ Please see the [Changelog](./docs/changelog.md) page.
 
 ## Author and Thanks
 
-pyenv-win was developed by [Kiran Kumar Kotari](https://github.com/kirankotari) and [Contributors](https://github.com/pyenv-win/pyenv-win/graphs/contributors)  
+pyenv-win was developed by [Kiran Kumar Kotari](https://github.com/kirankotari) and [Contributors](https://github.com/ealap/pyenv-win/graphs/contributors)
 Thanks for all Contributors and Supports for patience for the latest major release.
 
 [1]: https://github.com/pyenv/pyenv

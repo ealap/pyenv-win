@@ -18,7 +18,7 @@ echo    which       Display the full path to an executable
 echo    whence      List all Python versions that contain the given executable
 echo.
 echo See `pyenv help ^<command^>' for information on a specific command.
-echo For full documentation, see: https://github.com/pyenv-win/pyenv-win#readme
+echo For full documentation, see: https://github.com/ealap/pyenv-win#readme
 echo.
 EXIT /B
 )

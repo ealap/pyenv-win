@@ -9,7 +9,7 @@ env:
   DEPLOY_USER: "Kiran Kumar Kotari"
   DEPLOY_EMAIL: "kirankotari@live.com"
   DEPLOY_COMMIT_MESSAGE: Update cached versions
-  DEPLOY_BRANCH: master
+  DEPLOY_BRANCH: dev/ealap/main
 
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
     env:
       HOME: D:/a/pyenv-win/pyenv-win
     steps:
-    - name: Checkout master
+    - name: Checkout dev/ealap/main
       uses: actions/checkout@v3
     - name: Create a branch
       uses: peterjgrainger/action-create-branch@v2.0.1

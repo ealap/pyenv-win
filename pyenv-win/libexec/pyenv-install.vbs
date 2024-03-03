@@ -238,10 +238,10 @@ Sub registerVersion(version, installPath)
     ' Python Software Foundation
     'sh.RegWrite key & "DiplayName","pyenv-win","REG_SZ"
     ' http://www.python.org/
-    'sh.RegWrite key & "SupportUrl","https://github.com/pyenv-win/pyenv-win/issues","REG_SZ"
+    'sh.RegWrite key & "SupportUrl","https://github.com/ealap/pyenv-win/issues","REG_SZ"
     key = key & version &"\"
     sh.RegWrite key & "DiplayName","Python "& sysVersion &" (64-bit)","REG_SZ"
-    sh.RegWrite key & "SupportUrl","https://github.com/pyenv-win/pyenv-win/issues","REG_SZ"
+    sh.RegWrite key & "SupportUrl","https://github.com/ealap/pyenv-win/issues","REG_SZ"
     sh.RegWrite key & "SysArchitecture","64bit","REG_SZ"
     sh.RegWrite key & "SysVersion",sysVersion,"REG_SZ"
     sh.RegWrite key & "Version",version,"REG_SZ"
@@ -390,7 +390,7 @@ Sub main(arg)
     If Is32Bit Then
         opt32 = False
         opt64 = False
-    End If    
+    End If
     If opt32 And opt64 Then
         WScript.Echo "pyenv-install: only --32only or --64only may be specified, not both."
         WScript.Quit 1
@@ -473,7 +473,7 @@ Sub main(arg)
                 installVersions.Item(ary(0)) = Empty
             Else
                 ShowHelp
-            End If    
+            End If
         End If
     End If
 

@@ -7,7 +7,7 @@ Currently we support following ways, choose any of your comfort:
 - [Pyenv-win zip](#pyenv-win-zip) - manual installation
 - [Python pip](#python-pip) - for existing users
 - [Chocolatey](#chocolatey)
-- [How to use 32-train](#how-to-use-32-train)  
+- [How to use 32-train](#how-to-use-32-train)
   - [check announcements](../README.md#announcements)
 
 Hurray! When you are done here are steps to [Validate installation](../README.md#validate-installation)
@@ -21,7 +21,7 @@ _NOTE:_ If you are running Windows 10 1905 or newer, you might need to disable t
 The easiest way to install pyenv-win is to run the following installation command in a PowerShell terminal:
 
 ```pwsh
-Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
+Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/ealap/pyenv-win/dev/ealap/main/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
 ```
 
 If you are getting any **UnauthorizedAccess** error as below then start Windows PowerShell with the "Run as administrator" option and run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine`, now re-run the above installation command.
@@ -31,12 +31,12 @@ If you are getting any **UnauthorizedAccess** error as below then start Windows 
 more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
 At line:1 char:173
 + ... n.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~ 
- + CategoryInfo          : SecurityError: (:) [], PSSecurityException 
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+ + CategoryInfo          : SecurityError: (:) [], PSSecurityException
  + FullyQualifiedErrorId : UnauthorizedAccess
 ```
 
-For more information on 'digitally signed' or 'Security warning' you can refer to following issue [#332](https://github.com/pyenv-win/pyenv-win/issues/332)
+For more information on 'digitally signed' or 'Security warning' you can refer to following issue [#332](https://github.com/ealap/pyenv-win/issues/332)
 
 Installation is complete!
 
@@ -50,7 +50,7 @@ The default way to install pyenv-win, it needs git commands you need to install 
 
 If you are using PowerShell or Git Bash use `$HOME` instead of `%USERPROFILE%`
 
-git clone using command prompt `git clone https://github.com/pyenv-win/pyenv-win.git "%USERPROFILE%\.pyenv"`
+git clone using command prompt `git clone https://github.com/ealap/pyenv-win.git "%USERPROFILE%\.pyenv"`
 
 steps to [add System Settings](#add-system-settings)
 
@@ -68,7 +68,7 @@ Manual installation steps for pyenv-win
 
 If you are using PowerShell or Git Bash use `$HOME` instead of `%USERPROFILE%`
 
-1. Download [pyenv-win.zip](https://github.com/pyenv-win/pyenv-win/archive/master.zip)
+1. Download [pyenv-win.zip](https://github.com/ealap/pyenv-win/archive/dev/ealap/main.zip)
 
 2. Create a `.pyenv` directory using command prompt `mkdir %USERPROFILE%/.pyenv` if not exist
 
@@ -92,9 +92,9 @@ For existing python users
 
 ### Command prompt
 
-`pip install pyenv-win --target %USERPROFILE%\\.pyenv`  
+`pip install pyenv-win --target %USERPROFILE%\\.pyenv`
 
-If you run into an error with the above command use the folllowing instead ([#303](https://github.com/pyenv-win/pyenv-win/issues/303)):
+If you run into an error with the above command use the folllowing instead ([#303](https://github.com/ealap/pyenv-win/issues/303)):
 
 `pip install pyenv-win --target %USERPROFILE%\\.pyenv --no-user --upgrade`
 
@@ -165,7 +165,7 @@ Return to [README](../README.md#installation)
   1. run `pip install pyenv-win==2.32.x --target %USERPROFILE%\.pyenv`
   2. steps to [add System Settings](#add-system-settings)
 - **Using Zip**
-  1. Download [pyenv-win.zip](https://github.com/pyenv-win/pyenv-win/archive/32bit-train.zip)
+  1. Download [pyenv-win.zip](https://github.com/ealap/pyenv-win/archive/32bit-train.zip)
   2. Follow step 2 from [Pyenv-win zip](#pyenv-win-zip)
   3. steps to [add System Settings](#add-system-settings)
 
